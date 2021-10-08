@@ -71,7 +71,7 @@ button:hover{
 .report, .next-day, .day-after-next{
     background: #000000;
     opacity: 1;
-    height: 200px; 
+    height: auto; 
     width:50%;
     margin-top:10px;
     border-radius: 5px;
