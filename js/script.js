@@ -1,4 +1,4 @@
-const fetchWeatherData = () => {
+function fetchWeatherData() {
     const location = document.querySelector('#city-name').value;
 
     if(!location) return;
