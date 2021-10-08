@@ -101,3 +101,22 @@ button:hover{
     justify-content: space-between;
     
 }
+
+.day-after-next{
+    margin-left:10px;
+}
+
+@media only screen and (max-width: 800px) {
+    /* For mobile phones: */
+    .forecast{
+        width:100%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .day-after-next{
+        margin-left:0px;
+    }
+  }
