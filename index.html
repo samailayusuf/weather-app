@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.22.0/axios.min.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css"/>
+</head>
+<body>
+<nav>
+    <h2>Forecast</h2>
+
+</nav>
+
+
+
+<main>
+    <h1>Check The Weather</h1>
+
+        <section class="control-wrapper"><!--- This houses the input form to collect location input-->
+            <input type="text" id="city-name" placeholder="Enter City Name"/>
+            <button id="button" onclick="fetchWeatherData()">Search</button>
+        </section>
+
+    <section class="report">
+        <div style="flex:2">
+            <h2 style="border-bottom:1px solid #B27092; padding:10px;">Today's report</h2>
+            <h3 id="city"> City</h3>
+            <h3 id="condition"> Condition </h3>
+            <h3 id="temperature"> Temperature &#8451</h3>
+        
+        </div >
+            
+        <div id="image" style="flex:1">
+        </div>
+    </section>
+
+    <section class="forecast">
+        <section class="next-day">
+            <div style="flex:2">
+                <h2 style="border-bottom:1px solid #B27092; padding:10px;">Tomorrow's Forecast</h2>
+                <h3 id="next-city"> City</h3>
+                <h3 id="next-condition"> Condition </h3>
+                <h3 id="next-temperature"> Temperature &#8451</h3>
+            
+            </div >
+                
+            <div id="next-image" style="flex:1">
+            </div>
+        </section>
+
+        <section class="day-after-next" style="margin-left:10px;">
+            <div style="flex:2">
+                <h2 style="border-bottom:1px solid #B27092; padding:10px;">Day After Next's Forecast</h2>
+                <h3 id="next-forecast-city"> City</h3>
+                <h3 id="next-forecast-condition"> Condition </h3>
+                <h3 id="next-forecast-temperature"> Temperature &#8451</h3>
+            
+            </div >
+                
+            <div id="next-forecast-image" style="flex:1">
+            </div>
+        </section>
+
+    </section>
+
+</main>
+    
+    <script src="/js/script.js">
+
+    </script>
+</body>
+</html>
