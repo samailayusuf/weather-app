@@ -102,6 +102,7 @@ button:hover{
     display:flex;flex-direction: row;
     justify-content: space-between;
     visibility: hidden;
+    margin-bottom: 20px;;
     
 }
 
@@ -126,7 +127,7 @@ button:hover{
     padding: 10px 20px;
     border-radius: 5px;
     position: absolute;
-    
+
 }
 
 @media only screen and (max-width: 800px) {
