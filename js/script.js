@@ -91,6 +91,9 @@ function fetchWeatherData() {
     })
     .catch(err =>{
         console.log(err);
-        loader.innerHTML = `<h3>${err}</h3>`;
+        loaderSection.innerHTML = err ? `<h3>Location Not Found</h3>` : '';
+        
+        setTimeout(()=> loaderSection.style.visibility = "hidden", 3000)
+        
     })//Promise is used to handle async operation
 }
