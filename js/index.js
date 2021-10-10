@@ -20,7 +20,7 @@ function fetchWeatherData() {
     const nextForecastTemperature = document.querySelector('#next-forecast-temperature');
     const nextForecastImageContainer = document.querySelector('#next-forecast-image');
     //console.log('clicked');
-    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=1f88145fbe2e4e788aa101132210110&q=${location}&days=3&aqi=no&alerts=no`).
+    axios.get(`https://api.weatherapi.com/v1/forecast.json?key=1f88145fbe2e4e788aa101132210110&q=${location}&days=3&aqi=no&alerts=no`).
     then(response =>{
 
         const conditionText = response.data.current.condition.text;
@@ -64,5 +64,5 @@ function fetchWeatherData() {
     })
     .catch(err =>{
         console.log(err);
-    })
+    })//Promise is used to handle async operation
 }
