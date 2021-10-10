@@ -91,5 +91,6 @@ function fetchWeatherData() {
     })
     .catch(err =>{
         console.log(err);
+        loader.innerHTML = `<h3>${err}</h3>`;
     })//Promise is used to handle async operation
 }
