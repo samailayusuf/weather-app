@@ -81,6 +81,7 @@ button:hover{
     display: flex;
     color: #FFE9F3;
     text-align: center;
+    visibility: hidden;
 }
 
 #image{
@@ -100,11 +101,32 @@ button:hover{
     width:50%;
     display:flex;flex-direction: row;
     justify-content: space-between;
+    visibility: hidden;
     
 }
 
 .day-after-next{
     margin-left:10px;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.loader{
+    display:flex;
+    color: #000;
+    visibility: hidden;
+    border:none;
+    background: #b27092;
+    color: #FFE9F3;
+    font-size:18px;
+    cursor:pointer;
+    transition: all ease 0.5s;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: absolute;
+    
 }
 
 @media only screen and (max-width: 800px) {

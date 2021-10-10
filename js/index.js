@@ -1,8 +1,29 @@
 function fetchWeatherData() {
     const location = document.querySelector('#city-name').value;
 
-    if(!location) return;
+    const reportSection = document.querySelector('.report');
+    const forecastSection = document.querySelector('.forecast');
+    const dayAfterNextSection = document.querySelector('.day-after-next');
+    const nextDaySetion = document.querySelector('.next-day');
+    const loaderSection = document.querySelector('.loader');
+
+    loaderSection.style.visibility = "visible";
+    
+
+    if(!location) {
+        
+        loaderSection.innerHTML = "<h3>No Data returned!</h3>";
+        setTimeout(() => {
+            loaderSection.style.visibility = "hidden";
+        }, 3000);
+        
+        return false;
+       
+    }
+
+    loaderSection.innerHTML = "<h3>Loading...</h3>";
     //Grabbing the UI elements for same day report
+    console.log(loaderSection.innerHTML);
     const city = document.querySelector('#city');
     const condition = document.querySelector('#condition');
     const temperature = document.querySelector('#temperature');
@@ -60,6 +81,12 @@ function fetchWeatherData() {
         condition.innerText = conditionText;
         temperature.innerHTML = temperatureData;
         imageContainer. innerHTML = `<img src=${image} />`;
+
+        loaderSection.style.visibility = "hidden";
+        reportSection.style.visibility = "visible";
+        forecastSection.style.visibility = "visible";
+        dayAfterNextSection.style.visibility = "visible";
+        nextDaySetion.style.visibility = "visible";
 
     })
     .catch(err =>{
