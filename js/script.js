@@ -7,14 +7,14 @@ function fetchWeatherData() {
     const nextDaySetion = document.querySelector('.next-day');
     const loaderSection = document.querySelector('.loader');
 
-    loaderSection.style.visibility = "visible";
+    loaderSection.style.visibility = "visible"; //Set loader text to visible
     
 
     if(!location) {
         
         loaderSection.innerHTML = "<h3>No Data returned!</h3>";
         setTimeout(() => {
-            loaderSection.style.visibility = "hidden";
+            loaderSection.style.visibility = "hidden"; //sets loader text to hidden after 3 seconds
         }, 3000);
         
         return false;
