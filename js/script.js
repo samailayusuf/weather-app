@@ -12,7 +12,7 @@ function fetchWeatherData() {
 
     if(!location) {
         
-        loaderSection.innerHTML = "<h3>No Data returned!</h3>";
+        loaderSection.innerHTML = "<h3>Please Input City Name!</h3>";
         setTimeout(() => {
             loaderSection.style.visibility = "hidden"; //sets loader text to hidden after 3 seconds
         }, 3000);
